@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="style/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-Photoroom.png-Photoroom.png">
+    <title>Аредатор</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="logo"><img src="img/logo-Photoroom.png-Photoroom.png" alt="RentRide Logo">RentRide</a>
+        <ul class="menu">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Авто</a></li>
+            <li><a href="#">Ацкии</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Условия</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <button class="btn">Обратная связь</button>
+    </div>
+    <div class="main-content">
+        <h1>Маркетплейс аренды автомобилей</h1>
+        <p>Мы объединили 2000+ предложений прокатов от частных автовладельцев по всей России</p>
+        <button class="btn">Найти автомобиль</button>
+    </div>
+
+
+    <div class="search-bar">
+        <label for="start">Начало:</label>
+        <input id="start" type="date" class="search-bar-input">
+        <label for="end">Завершение:</label>
+        <input id="end" type="date" class="search-bar-input">
+        <select class="search-bar-select">
+            <option>Коробка передач</option>
+            <option>Автомат</option>
+            <option>Механика</option>
+            <option>Робот</option>
+        </select>
+        <select class="search-bar-select">
+            <option>Кузов автомобиля</option>
+            <option>Седан</option>
+            <option>Хэтчбек</option>
+            <option>Универсал</option>
+            <option>Внедорожник</option>
+            <option>Кабриолет</option>
+            <option>Кроссовер</option>
+            <option>Купе</option>
+            <option>Лимузин</option>
+        </select>
+        <button class="search-bar-submit">Найти автомобиль</button>
+    </div>
+
+    <section class="container-card">
+        <div class="category-item">
+            <img src="img/economy.webp" alt="Эконом" class="category-image">
+            <p class="category-name">Эконом</p>
+            <p class="category-price-range">700 ₽ - 2999 ₽</p>
+        </div>
+        <div class="category-item">
+            <img src="img/comfort.webp" alt="Комфорт" class="category-image">
+            <p class="category-name">Комфорт</p>
+            <p class="category-price-range">700 ₽ - 2999 ₽</p>
+        </div>
+        <div class="category-item">
+            <img src="img/business.webp" alt="Бизнес" class="category-image">
+            <p class="category-name">Бизнес</p>
+            <p class="category-price-range">700 ₽ - 2999 ₽</p>
+        </div>
+        <div class="category-item">
+            <img src="img/premium.webp" alt="Премиум" class="category-image">
+            <p class="category-name">Премиум</p>
+            <p class="category-price-range">700 ₽ - 2999 ₽</p>
+        </div>
+        <div class="category-item">
+            <img align ="left" src="img/suv.webp" alt="Внедорожник" class="category-image">
+            <p class="category-name">Внедорожник</p>
+            <p class="category-price-range">700 ₽ - 2999 ₽</p>
+        </div>
+    </section>
+
+
+    <!-- new car -->
+    <section class="new-cars-container">
+        <div class="new-cars-header">
+            <span class="new-badge">NEW</span>
+            <h2>Новинки в каталоге</h2>
+        </div>
+        <div class="new-cars-slider">
+            <!-- Slide 1 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="img/new car/car1.webp" alt="">
+                </div>
+                <h3>Hyundai H-1, 2016</h3>
+                <span class="new-arrival">Новинка</span>
+                <div class="price">от 4 800 ₽ / сутки</div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="img/new car/car2.webp" alt="">
+                </div>
+                <h3>LADA Largus Furgon, 2021</h3>
+                <span class="new-arrival">Новинка</span>
+                <div class="price">от 2 800 ₽ / сутки</div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="img/new car/car3.webp" alt="">
+                </div>
+                <h3>Chery Tiggo 8 Pro, 2023</h3>
+                <span class="new-arrival">Новинка</span>
+                <div class="price">от 2 989 ₽ / сутки</div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="img/new car/car4.webp" alt="">
+                </div>
+                <h3>Skoda Kodiaq, 2020</h3>
+                <span class="new-arrival">Новинка</span>
+                <div class="price">от 3 200 ₽ / сутки</div>
+            </div>
+
+        </div>
+    </section>
+      
+    
+      <section class="advantages">
+        <h2 class="advantages-title">Наши преимущества</h2>
+        <div class="advantage-grid">
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <hr>
+                <h3 class="advantage-heading">Уникальные Скидки на Долгосрочную Аренду</h3>
+                <p class="advantage-description">С нашим сервисом, чем дольше ваше путешествие, тем меньше вы платите. Мы предлагаем эксклюзивные условия для длительных поездок, позволяя вам сэкономить до 50%. Это идеальный вариант для тех, кто планирует обширные путешествия по России.</p>
+            </div>
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <h3 class="advantage-heading">Путешествуйте Без Ограничений</h3>
+                <p class="advantage-description">Мы убрали границы для ваших путешествий. Наш автопарк готов сопровождать вас в самые укромные уголки страны, куда не доходят стандартные сервисы каршеринга. Исследуйте Россию без ограничений с комфортом и свободой.</p>
+            </div>
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <h3 class="advantage-heading">Полная Гибкость с Бесплатной Отменой</h3>
+                <p class="advantage-description">Планы изменились? Нет проблем! Мы предлагаем полный возврат средств при отмене бронирования за 48 часов до начала аренды. Мы ценим ваше право на изменение планов и предлагаем максимальную гибкость.</p>
+            </div>
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <h3 class="advantage-heading">Новая Бонусная Система</h3>
+                <p class="advantage-description">Мы вводим революционную бонусную программу: за каждую аренду вы получаете не только 1% кэшбэка, но и дополнительные бонусы, которые можно обменять на уникальные путешественнические впечатления и эксклюзивные предложения.</p>
+            </div>
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <h3 class="advantage-heading">Разнообразие Автомобилей Как Никогда Раньше</h3>
+                <p class="advantage-description">Наш каталог автомобилей теперь включает не только традиционные варианты, но и эксклюзивные электромобили, роскошные спорткары и уникальные ретро-модели для особенных случаев. Выбирайте идеальный автомобиль для любого события и настроения.</p>
+            </div>
+
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <h3 class="advantage-heading">Гарантированная Безопасность на Дорогах</h3>
+                <p class="advantage-description">Каждый автомобиль в нашем парке обеспечен не только стандартной страховкой ОСАГО, но и дополнительными гарантиями безопасности, включая полную каско и поддержку 24/7 на дороге.</p>
+            </div>
+            <div class="advantage-item">
+                <img src="your-icon.png" alt="Экономия" class="advantage-icon">
+                <h3 class="advantage-heading">Электронный Документооборот</h3>
+                <p class="advantage-description">Мы заботимся не только о вашем удобстве, но и об окружающей среде. Все документы теперь обрабатываются электронно, что минимизирует потребление бумаги и способствует сохранению лесов.</p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- join-rent-ride -->
+<section class="join-rent-ride">
+    <div class="text-content">
+      <span class="new-tag">NEW</span>
+      <h2>Присоединяйтесь к Rentride</h2>
+      <p>Зарегистрируйтесь и начните пользоваться сервисом, как владелец авто или арендатор. Удачи на дорогах 😊</p>
+      <button class="button-let">Сдать автомобиль</button>
+      <button class="button-rent">Арендовать автомобиль</button>
+    </div>
+    <div class="image-content">
+      <img src="img/join.png" alt="Ключи Rentride">
+    </div>
+  </section>
+
+
+    <button onclick="openModal('Toyota Camry')">Арендовать Toyota Camry</button>
+
+    <!-- Модальное окно для ввода данных -->
+    <div id="rentModal" style="display:none;">
+        <form id="rentForm">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="email" id="email" placeholder="Ваш email" required>
+            <input type="hidden" id="car">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <script>
+        function openModal(carName) {
+            document.getElementById('car').value = carName;
+            document.getElementById('rentModal').style.display = 'block';
+        }
+
+        document.getElementById('rentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                car: document.getElementById('car').value,
+                date: new Date().toISOString(),
+            };
+
+            // Отправка данных на сервер
+            fetch('/rent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                    document.getElementById('rentModal').style.display = 'none';
+                })
+                .catch((error) => {
+                    console.error('Ошибка:', error);
+                });
+        });
+    </script>
+
+    <div style="display: block; width: 100%;"></div>
+
+
+
+
+    <!-- footer  -->
+
+
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Наши услуги</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Наши автомобили</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Конакты</a></li>
+
+        </ul>
+        <p>&copy; 2024 ООО "Арендатор" Мы объединили предложения частных автовладельцев по всей России</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+<a href="https://blackcar.rent/">https://blackcar.rent/</a>
+<a href="https://rentride.ru/">https://rentride.ru/</a>
