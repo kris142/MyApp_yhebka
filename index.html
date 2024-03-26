@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo-Photoroom.png-Photoroom.png">
     <title>Аредатор</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="header">
-        <a href="index.html" class="logo"><img src="img/logo-Photoroom.png-Photoroom.png" alt="RentRide Logo">Арендатор</a>
+        <a href="index.html" class="logo"><img src="img/logo-Photoroom.png-Photoroom.png"
+                alt="RentRide Logo">Арендатор</a>
         <ul class="menu">
             <li><a href="/MyApp_yhebka/index.html">О нас</a></li>
             <li><a href="/MyApp_yhebka/style/page/page1.html">Авто</a></li>
@@ -20,7 +23,8 @@
             <li><a href="/MyApp_yhebka/style/page/page4.html">Условия</a></li>
             <li><a href="/MyApp_yhebka/style/page/page5.html">Контакты</a></li>
         </ul>
-        <button class="btn">Обратная связь</button>
+        <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#exampleModal">Обратная
+            связь</button>
     </div>
     <div class="main-content">
         <h1>Маркетплейс аренды автомобилей</h1>
@@ -129,65 +133,80 @@
 
         </div>
     </section>
-      
-    
-      <section class="advantages">
+
+
+    <section class="advantages">
         <h2 class="advantages-title">Наши преимущества</h2>
         <div class="advantage-grid">
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <hr>
                 <h3 class="advantage-heading">Уникальные Скидки на Долгосрочную Аренду</h3>
-                <p class="advantage-description">С нашим сервисом, чем дольше ваше путешествие, тем меньше вы платите. Мы предлагаем эксклюзивные условия для длительных поездок, позволяя вам сэкономить до 50%. Это идеальный вариант для тех, кто планирует обширные путешествия по России.</p>
+                <p class="advantage-description">С нашим сервисом, чем дольше ваше путешествие, тем меньше вы платите.
+                    Мы предлагаем эксклюзивные условия для длительных поездок, позволяя вам сэкономить до 50%. Это
+                    идеальный вариант для тех, кто планирует обширные путешествия по России.</p>
             </div>
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <h3 class="advantage-heading">Путешествуйте Без Ограничений</h3>
-                <p class="advantage-description">Мы убрали границы для ваших путешествий. Наш автопарк готов сопровождать вас в самые укромные уголки страны, куда не доходят стандартные сервисы каршеринга. Исследуйте Россию без ограничений с комфортом и свободой.</p>
+                <p class="advantage-description">Мы убрали границы для ваших путешествий. Наш автопарк готов
+                    сопровождать вас в самые укромные уголки страны, куда не доходят стандартные сервисы каршеринга.
+                    Исследуйте Россию без ограничений с комфортом и свободой.</p>
             </div>
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <h3 class="advantage-heading">Полная Гибкость с Бесплатной Отменой</h3>
-                <p class="advantage-description">Планы изменились? Нет проблем! Мы предлагаем полный возврат средств при отмене бронирования за 48 часов до начала аренды. Мы ценим ваше право на изменение планов и предлагаем максимальную гибкость.</p>
+                <p class="advantage-description">Планы изменились? Нет проблем! Мы предлагаем полный возврат средств при
+                    отмене бронирования за 48 часов до начала аренды. Мы ценим ваше право на изменение планов и
+                    предлагаем максимальную гибкость.</p>
             </div>
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <h3 class="advantage-heading">Новая Бонусная Система</h3>
-                <p class="advantage-description">Мы вводим революционную бонусную программу: за каждую аренду вы получаете не только 1% кэшбэка, но и дополнительные бонусы, которые можно обменять на уникальные путешественнические впечатления и эксклюзивные предложения.</p>
+                <p class="advantage-description">Мы вводим революционную бонусную программу: за каждую аренду вы
+                    получаете не только 1% кэшбэка, но и дополнительные бонусы, которые можно обменять на уникальные
+                    путешественнические впечатления и эксклюзивные предложения.</p>
             </div>
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <h3 class="advantage-heading">Разнообразие Автомобилей Как Никогда Раньше</h3>
-                <p class="advantage-description">Наш каталог автомобилей теперь включает не только традиционные варианты, но и эксклюзивные электромобили, роскошные спорткары и уникальные ретро-модели для особенных случаев. Выбирайте идеальный автомобиль для любого события и настроения.</p>
+                <p class="advantage-description">Наш каталог автомобилей теперь включает не только традиционные
+                    варианты, но и эксклюзивные электромобили, роскошные спорткары и уникальные ретро-модели для
+                    особенных случаев. Выбирайте идеальный автомобиль для любого события и настроения.</p>
             </div>
 
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <h3 class="advantage-heading">Гарантированная Безопасность на Дорогах</h3>
-                <p class="advantage-description">Каждый автомобиль в нашем парке обеспечен не только стандартной страховкой ОСАГО, но и дополнительными гарантиями безопасности, включая полную каско и поддержку 24/7 на дороге.</p>
+                <p class="advantage-description">Каждый автомобиль в нашем парке обеспечен не только стандартной
+                    страховкой ОСАГО, но и дополнительными гарантиями безопасности, включая полную каско и поддержку
+                    24/7 на дороге.</p>
             </div>
             <div class="advantage-item">
                 <img src="your-icon.png" alt="Экономия" class="advantage-icon">
                 <h3 class="advantage-heading">Электронный Документооборот</h3>
-                <p class="advantage-description">Мы заботимся не только о вашем удобстве, но и об окружающей среде. Все документы теперь обрабатываются электронно, что минимизирует потребление бумаги и способствует сохранению лесов.</p>
+                <p class="advantage-description">Мы заботимся не только о вашем удобстве, но и об окружающей среде. Все
+                    документы теперь обрабатываются электронно, что минимизирует потребление бумаги и способствует
+                    сохранению лесов.</p>
             </div>
         </div>
     </section>
 
 
-<!-- join-rent-ride -->
-<section class="join-rent-ride">
-    <div class="text-content">
-      <!-- <span class="new-tag">NEW</span> -->
-      <h2>Присоединяйтесь к Rentride</h2>
-      <p>Зарегистрируйтесь и начните пользоваться сервисом, как владелец авто или арендатор. Удачи на дорогах 😊</p>
-      <button class="button-let">Сдать автомобиль</button>
-      <button class="button-rent">Арендовать автомобиль</button>
-    </div>
-    <div class="image-content">
-      <img src="img/join.png" alt="Ключи Rentride">
-    </div>
-  </section>
+    <!-- join-rent-ride -->
+    <section class="join-rent-ride">
+        <div class="text-content">
+            <!-- <span class="new-tag">NEW</span> -->
+            <h2>Присоединяйтесь к Rentride</h2>
+            <p>Зарегистрируйтесь и начните пользоваться сервисом, как владелец авто или арендатор. Удачи на дорогах 😊
+            </p>
+            <button class="button-let">Сдать автомобиль</button>
+            <button class="button-rent">Арендовать автомобиль</button>
+        </div>
+        <div class="image-content">
+            <img src="img/join.png" alt="Ключи Rentride">
+        </div>
+    </section>
 
 
     <button onclick="openModal('Toyota Camry')">Арендовать Toyota Camry</button>
@@ -275,8 +294,124 @@
         </ul>
         <p>&copy; 2024 ООО "Арендатор" Мы объединили предложения частных автовладельцев по всей России</p>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Обратная связь</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" action="handler.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input id="name" class="form-control" name="name" required type="text" placeholder="Иванов Иван Иванович">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш E-mail:</label>
+                        <input id="email" class="form-control" name="email" required type="email" placeholder="ivanov@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон:</label>
+                        <input id="phone" class="form-control" name="phone" required type="text" placeholder="+3 8 (0XX) 000-00-00">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Текст сообщения:</label>
+                        <textarea id="message" class="form-control" required name="message" rows="4"></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                        <input id="check" class="form-check-input" checked type="checkbox">
+                        <label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
+                    </div>
+                    <button id="button" class="btn btn-success" type="submit">Отправить</button>
+                    <div class="result">
+                        <span id="answer"></span>
+                        <span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+	
+	<script>
+        jQuery(document).ready(function($) {
+
+// Добавляем маску для поля с номера телефона
+$('#phone').mask('+7 (999) 999-99-99');
+
+// Проверяет отмечен ли чекбокс согласия
+// с обработкой персональных данных
+$('#check').on('click', function() {
+    if ($("#check").prop("checked")) {
+        $('#button').attr('disabled', false);
+    } else {
+        $('#button').attr('disabled', true);
+    }
+});
+
+// Отправляет данные из формы на сервер и получает ответ
+$('#contactForm').on('submit', function(event) {
+    
+    event.preventDefault();
+
+    var form = $('#contactForm'),
+        button = $('#button'),
+        answer = $('#answer'),
+        loader = $('#loader');
+
+    $.ajax({
+        url: 'handler.php',
+        type: 'POST',
+        data: form.serialize(),
+        beforeSend: function() {
+            answer.empty();
+            button.attr('disabled', true).css('margin-bottom', '20px');
+            loader.fadeIn();
+        },
+        success: function(result) {
+            loader.fadeOut(300, function() {
+                answer.text(result);
+            });
+            form.find('.form-control').val('');
+            button.attr('disabled', false);
+        },
+        error: function() {
+            loader.fadeOut(300, function() {
+                answer.text('Произошла ошибка! Попробуйте позже.');
+            });
+            button.attr('disabled', false);
+        }
+    });
+
+});
+
+});
+    </script>
+    
+
+
 </body>
 
 </html>
