@@ -1,0 +1,304 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    img{
+        max-width: 50px;
+    }
+  }
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  .menu {
+    li{
+    padding: 5px 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+      }
+  }
+  
+
+
+
+
+  .header1 {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Custom dropdown styles */
+.filter-dropdown {
+  appearance: none; /* Removes default styling of the select element */
+  background-color: #fff; /* Background color */
+  border: 2px solid #ddd; /* Border color and width */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 30px 10px 10px; /* Padding */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Cursor type */
+  position: relative; /* Positioning context for pseudo-elements */
+  outline: none; /* Removes the outline */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+}
+
+/* Pseudo-element for custom dropdown arrow */
+.filter-dropdown::-ms-expand {
+  display: none; /* Hides the default arrow in IE */
+}
+
+.filter-dropdown::after {
+  content: '\25BC'; /* Unicode for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%); /* Centers the arrow vertically */
+  pointer-events: none; /* Makes it non-interactive */
+  color: #333; /* Arrow color */
+  font-size: 0.6rem; /* Arrow size */
+}
+
+/* Change border color on hover */
+.filter-dropdown:hover {
+  border-color: #bbb; /* Border color on hover */
+}
+
+/* Focus state for accessibility */
+.filter-dropdown:focus {
+  border-color: #999; /* Border color on focus */
+}
+
+/* Adjusting margin between dropdowns for visual balance */
+.filter-dropdown:not(:last-child) {
+  margin-right: 15px;
+}
+
+.cars-display {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    gap: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.car-category {
+    flex: 0 0 auto; /* Don't grow, don't shrink, basis is auto */
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.car-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.car-category img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.category-title {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.price-range {
+    display: block;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Scrollbar customization */
+.cars-display::-webkit-scrollbar {
+    height: 5px;
+}
+
+.cars-display::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.cars-display::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-dropdown {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+  /* footer  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+
+.footer {
+  margin-top:200px ;
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
