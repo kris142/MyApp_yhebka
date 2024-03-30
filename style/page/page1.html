@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo-Photoroom.png-Photoroom.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>Аредатор</title>
 </head>
 
@@ -118,6 +120,55 @@
     
 
 
+
+
+<!-- Модальное окно для ввода данных -->
+<div id="rentModal" style="display:none;">
+    <form id="rentForm">
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="email" id="email" placeholder="Ваш email" required>
+        <input type="hidden" id="car">
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+<script>
+    function openModal(carName) {
+        document.getElementById('car').value = carName;
+        document.getElementById('rentModal').style.display = 'block';
+    }
+
+    document.getElementById('rentForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            car: document.getElementById('car').value,
+            date: new Date().toISOString(),
+        };
+
+        // Отправка данных на сервер
+        fetch('/rent', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                document.getElementById('rentModal').style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Ошибка:', error);
+            });
+    });
+</script>
+
+<div style="display: block; width: 100%;"></div>
+
+
     <!-- footer  -->
     <footer class="footer">
         <div class="waves">
@@ -152,4 +203,108 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Обратная связь</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="handler.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Ваше имя:</label>
+                            <input id="name" class="form-control" name="name" required type="text" placeholder="Иванов Иван Иванович">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Ваш E-mail:</label>
+                            <input id="email" class="form-control" name="email" required type="email" placeholder="ivanov@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Ваш телефон:</label>
+                            <input id="phone" class="form-control" name="phone" required type="text" placeholder="+3 8 (0XX) 000-00-00">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Текст сообщения:</label>
+                            <textarea id="message" class="form-control" required name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input id="check" class="form-check-input" checked type="checkbox">
+                            <label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
+                        </div>
+                        <button id="button" class="btn btn-success" type="submit">Отправить</button>
+                        <div class="result">
+                            <span id="answer"></span>
+                            <span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        
+        
+        <script>
+            jQuery(document).ready(function($) {
+    
+    // Добавляем маску для поля с номера телефона
+    $('#phone').mask('+7 (999) 999-99-99');
+    
+    // Проверяет отмечен ли чекбокс согласия
+    // с обработкой персональных данных
+    $('#check').on('click', function() {
+        if ($("#check").prop("checked")) {
+            $('#button').attr('disabled', false);
+        } else {
+            $('#button').attr('disabled', true);
+        }
+    });
+    
+    // Отправляет данные из формы на сервер и получает ответ
+    $('#contactForm').on('submit', function(event) {
+        
+        event.preventDefault();
+    
+        var form = $('#contactForm'),
+            button = $('#button'),
+            answer = $('#answer'),
+            loader = $('#loader');
+    
+        $.ajax({
+            url: 'handler.php',
+            type: 'POST',
+            data: form.serialize(),
+            beforeSend: function() {
+                answer.empty();
+                button.attr('disabled', true).css('margin-bottom', '20px');
+                loader.fadeIn();
+            },
+            success: function(result) {
+                loader.fadeOut(300, function() {
+                    answer.text(result);
+                });
+                form.find('.form-control').val('');
+                button.attr('disabled', false);
+            },
+            error: function() {
+                loader.fadeOut(300, function() {
+                    answer.text('Произошла ошибка! Попробуйте позже.');
+                });
+                button.attr('disabled', false);
+            }
+        });
+    
+    });
+    
+    });
+        </script>
 </body>
